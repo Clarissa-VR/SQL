@@ -1,0 +1,21 @@
+#Use a SELECT statement to order the items by price.
+SELECT item_name, price
+FROM superstore
+ORDER BY price DESC;
+
+#Show a statistic about the item prices.
+SELECT SUM (price), item_name
+FROM superstore
+GROUP BY item_name;
+
+SELECT COUNT (item_name)
+FROM superstore;
+
+#Show a statistic about the price for items in the category of "Kitchen Supplies". 
+SELECT SUM(price)
+FROM superstore
+WHERE category = 'Kitchen Supplies';
+
+SELECT (stock_quantity)
+FROM superstore
+WHERE item_name = 'Air Purifier';
